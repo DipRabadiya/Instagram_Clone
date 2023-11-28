@@ -12,14 +12,14 @@ public class OpenApiConfig {
     OpenAPI customOpenApi() {
         return new OpenAPI().info(
                 new Info()
-                        .title("Twitter Clone API")
+                        .title("Instagram API")
                         .version("v1")
                         .description("This API enables user management, post creation, liking, commenting, and follow/unfollow functionality for the Twitter clone application. Created by **Krish Lakhani & Yash Sojitra.**")
                         .termsOfService("https://springdoc.org/")
                         .license(
                                 new License()
                                         .name("Source Code")
-                                        .url("https://github.com/yashsojitra65/Twitter_Clone")
+                                        .url("https://github.com/DipRabadiya27/Instagram_Clone")
                         )
         );
     }
