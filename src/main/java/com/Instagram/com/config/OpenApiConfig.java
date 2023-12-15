@@ -14,7 +14,7 @@ public class OpenApiConfig {
                 new Info()
                         .title("Instagram API")
                         .version("v1")
-                        .description("This API enables user management, post creation, liking, commenting, and follow/unfollow functionality for the Twitter clone application. Created by **Dip Rabadiya.**")
+                        .description("This API enables user management, post creation, liking, commenting, and follow/unfollow functionality for the Instagram clone application. Created by **Dip Rabadiya.**")
                         .termsOfService("https://springdoc.org/")
                         .license(
                                 new License()
