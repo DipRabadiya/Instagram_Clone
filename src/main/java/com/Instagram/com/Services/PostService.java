@@ -16,7 +16,6 @@ public class PostService {
         return postRepo.save(post);
     }
 
-
     public String deletePost(Integer postId, User user) {
         Post post = postRepo.findById(postId).orElse(null);
         if (post != null && post.getPostOwner().equals(user)) {
@@ -32,6 +31,4 @@ public class PostService {
     public Post getPostById(Integer postId) {
         return postRepo.findById(postId).orElse(null);
     }
-
-
 }

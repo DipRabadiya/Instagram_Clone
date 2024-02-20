@@ -20,10 +20,8 @@ public class PasswordEncrypter {
             }
             hexString.append(hex);
         }
-
         return hexString.toString();
     }
-
 
     public static boolean verifyPasswordWithStaticSecret(String userPassword, String storedHash) throws NoSuchAlgorithmException {
         String computedHash = hashPasswordWithStaticSecret(userPassword);

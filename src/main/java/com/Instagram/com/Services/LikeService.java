@@ -20,7 +20,7 @@ public class LikeService {
 
     public String addLike(Like like) {
         likeRepo.save(like);
-        return "Twitter post liked successfully!!!";
+        return "Instagram post liked successfully!!!";
     }
     public Integer getLikeCountForPost(Post validPost) {
         return likeRepo.findByTwitterPost(validPost).size();

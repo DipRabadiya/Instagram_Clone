@@ -26,7 +26,7 @@ public class UserController {
     @PostMapping("/SignUp")
     @Operation(
             summary = "User Registration",
-            description = "Create a new user account securely. Allow users to register on the Twitter clone platform to access various features, including posting, liking, commenting, and following functionalities.",
+            description = "Create a new user account securely. Allow users to register on the Instagram clone platform to access various features, including posting, liking, commenting, and following functionalities.",
             tags = {"User Management"}
     )
     private String SignUp(@RequestBody User user) throws NoSuchAlgorithmException {
@@ -38,7 +38,7 @@ public class UserController {
     @PostMapping("/SignIn")
     @Operation(
             summary = "User Sign In",
-            description = "Allow users to sign in securely to the Twitter clone platform.",
+            description = "Allow users to sign in securely to the Instagram clone platform.",
             tags = {"User Management"}
     )
     private String SignIn(@RequestBody Credential credential) throws NoSuchAlgorithmException {
@@ -51,7 +51,7 @@ public class UserController {
     @GetMapping("SignOut")
     @Operation(
             summary = "User Sign Out",
-            description = "Allow users to sign out securely from the Twitter clone platform.",
+            description = "Allow users to sign out securely from the Instagram clone platform.",
             tags = {"User Management"}
     )
     private String SignOut(@RequestParam String email) throws NoSuchAlgorithmException {
@@ -63,7 +63,7 @@ public class UserController {
     @PostMapping("Post")
     @Operation(
             summary = "Create a Post",
-            description = "Allow users to create a new post on the Twitter clone platform.",
+            description = "Allow users to create a new post on the Instagram clone platform.",
             tags = {"User Management"}
     )
     private String CreatePost(@RequestBody Post post, @RequestParam String email) {
@@ -157,7 +157,7 @@ public class UserController {
     @PostMapping("follow")
     @Operation(
             summary = "Follow User",
-            description = "Allow a user to follow another user on the Twitter clone platform.",
+            description = "Allow a user to follow another user on the Instagram clone platform.",
             tags = {"User Management"}
     )
     public String FollowUser(@RequestBody Follow follow, @RequestParam String followerEmail) {
@@ -167,7 +167,7 @@ public class UserController {
     @DeleteMapping("unfollow/{followId}")
     @Operation(
             summary = "Unfollow User",
-            description = "Allow a user to unfollow another user on the Twitter clone platform.",
+            description = "Allow a user to unfollow another user on the Instagram clone platform.",
             tags = {"User Management"}
     )
     public String unFollowUser(@PathVariable Integer followId, @RequestParam String followerEmail) {
@@ -177,7 +177,7 @@ public class UserController {
     @PostMapping("comment")
     @Operation(
             summary = "Add Comment",
-            description = "Allow users to add comments to a post on the Twitter clone platform.",
+            description = "Allow users to add comments to a post on the Instagram clone platform.",
             tags = {"User Management"}
     )
     public String addComment(@RequestBody Comment comment, @RequestParam String commenterEmail) {
@@ -188,7 +188,7 @@ public class UserController {
     @DeleteMapping("removeComment")
     @Operation(
             summary = "Remove Comment",
-            description = "Allow users to remove their comments from a post on the Twitter clone platform.",
+            description = "Allow users to remove their comments from a post on the Instagram clone platform.",
             tags = {"User Management"}
     )
     public String removeComment(@RequestParam Integer commentId, @RequestParam String email) {
@@ -198,7 +198,7 @@ public class UserController {
     @PostMapping("/resetPass")
     @Operation(
             summary = "Reset Password",
-            description = "Allow users to reset their password on the Twitter clone platform.",
+            description = "Allow users to reset their password on the Instagram clone platform.",
             tags = {"User Management"}
     )
     public String resetPassWord(@RequestParam String email){
@@ -208,7 +208,7 @@ public class UserController {
     @PutMapping("verifyOTP")
     @Operation(
             summary = "Verify OTP",
-            description = "Verify the OTP (One-Time Password) sent to the user's email during the password reset process on the Twitter clone platform.",
+            description = "Verify the OTP (One-Time Password) sent to the user's email during the password reset process on the Instagram clone platform.",
             tags = {"User Management"}
     )
     public String verifyOTP(@RequestParam String email,String otp,String newPassword) throws NoSuchAlgorithmException {
