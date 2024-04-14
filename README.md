@@ -126,4 +126,4 @@ Feel free to connect with me to learn more or discuss the technology behind it:
 
 - ### The below video shows how the app works:
 
-https://github.com/DipRabadiya27/Instagram
+https://github.com/DipRabadiya/Instagram

@@ -22,7 +22,7 @@ public class Comment {
 
     @ManyToOne
     @JoinColumn(name = "fk_comment_post_id")
-    private Post twitterPost;
+    private Post instagramPost;
 
     @ManyToOne
     @JoinColumn(name = "fk_commenter_id")

@@ -19,7 +19,7 @@ public class OpenApiConfig {
                         .license(
                                 new License()
                                         .name("Source Code")
-                                        .url("https://github.com/DipRabadiya27/Instagram_Clone")
+                                        .url("https://github.com/DipRabadiya/Instagram_Clone")
                         )
         );
     }

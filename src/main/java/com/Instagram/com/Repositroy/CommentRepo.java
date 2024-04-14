@@ -9,6 +9,6 @@ import java.util.Collection;
 
 @Repository
 public interface CommentRepo extends JpaRepository<Comment,Integer> {
-    Collection<Comment> findByTwitterPost(Post validPost);
+    Collection<Comment> findByInstagramPost(Post validPost);
 
 }

@@ -107,7 +107,7 @@ public class UserService {
 
 
     public String addLike(Like like, String likeEmail) {
-        Post twitterPost = like.getTwitterPost();
+        Post twitterPost = like.getInstagramPost();
         boolean postValid = postService.validatePost(twitterPost);
 
         if (postValid) {
@@ -201,7 +201,7 @@ public class UserService {
     }
 
     public String addComment(Comment comment, String commenterEmail) {
-        boolean postValid = postService.validatePost(comment.getTwitterPost());
+        boolean postValid = postService.validatePost(comment.getInstagramPost());
         if (postValid) {
             User commenter = userRepo.findByUserEmail(commenterEmail);
             comment.setCommenter(commenter);
@@ -229,7 +229,7 @@ public class UserService {
 
     private boolean authorizeCommentRemover(String email, Comment comment) {
         String commentOwnerEmail = comment.getCommenter().getUserEmail();
-        String postOwnerEmail = comment.getTwitterPost().getPostOwner().getUserEmail();
+        String postOwnerEmail = comment.getInstagramPost().getPostOwner().getUserEmail();
 
         return postOwnerEmail.equals(email) || commentOwnerEmail.equals(email);
     }

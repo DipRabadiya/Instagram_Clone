@@ -14,7 +14,7 @@ public class LikeService {
     @Autowired
     LikeRepo likeRepo;
     public boolean isLikeAllowedOnThisPost(Post twitterPost, User liker) {
-        List<Like> likeList = likeRepo.findByTwitterPostAndLiker(twitterPost,liker);
+        List<Like> likeList = likeRepo.findByInstagramPostAndLiker(twitterPost,liker);
         return likeList != null && likeList.isEmpty();
     }
 
@@ -23,7 +23,7 @@ public class LikeService {
         return "Instagram post liked successfully!!!";
     }
     public Integer getLikeCountForPost(Post validPost) {
-        return likeRepo.findByTwitterPost(validPost).size();
+        return likeRepo.findByInstagramPost(validPost).size();
     }
 
     public Like findLike(Integer likeId) {

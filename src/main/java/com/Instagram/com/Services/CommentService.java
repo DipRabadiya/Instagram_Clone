@@ -12,7 +12,7 @@ public class CommentService {
     CommentRepo commentRepo;
 
     public Integer getCommentCountForPost(Post validPost) {
-        return commentRepo.findByTwitterPost(validPost).size();
+        return commentRepo.findByInstagramPost(validPost).size();
     }
 
     public String addComment(Comment comment) {
